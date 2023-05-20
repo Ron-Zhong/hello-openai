@@ -1,6 +1,8 @@
 # Build results
 [Bb]in/
 [Oo]bj/
+net*.0/
+.vscode/
 
 # Visual Studio files
 *.user
