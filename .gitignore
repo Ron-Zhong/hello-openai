@@ -1,0 +1,41 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+*.user
+*.suo
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.sbr
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sdf
+ipch/
+obj/
+[Bb]uild/
+[Tt]est[Rr]esult*/
+[Nn]uGet[Rr]estore/
+
+# Resharper files
+_ReSharper*/
+
+# GhostDoc plugin setting file
+GhostDoc.settings
+
+# Stylecop
+Settings.StyleCop
+
+# Packages files
+*.nupkg
+packages/**/*.nupkg
