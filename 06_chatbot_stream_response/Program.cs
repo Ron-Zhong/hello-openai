@@ -8,9 +8,10 @@ var builder = new ConfigurationBuilder()
 IConfiguration Configuration = builder.Build();
 
 var IS_AZURE_OPENAI = true;
-var AZURE_OPENAI_ENDPOINT = "https://poc-openai-mims.openai.azure.com/";
+var AZURE_OPENAI_ENDPOINT = Configuration["azure-openai-endpoint"] ?? string.Empty;
 var AZURE_OPENAI_API_KEY = Configuration["azure-openai-api-key"] ?? string.Empty;
 var OPENAI_API_KEY = Configuration["openai-api-key"] ?? string.Empty;
+var OPENAI_MODEL_NAME = IS_AZURE_OPENAI ? "chat" : "gpt-3.5-turbo";
 
 OpenAIClient client = IS_AZURE_OPENAI
     ? new OpenAIClient(
@@ -37,7 +38,7 @@ while (true)
     Console.WriteLine("OpenAI:");
 
     Response<StreamingChatCompletions> response = await client.GetChatCompletionsStreamingAsync(
-        deploymentOrModelName: "gpt-35-turbo",
+        deploymentOrModelName: OPENAI_MODEL_NAME,
         chatCompletionsOptions);
     using StreamingChatCompletions streamingChatCompletions = response.Value;
 
