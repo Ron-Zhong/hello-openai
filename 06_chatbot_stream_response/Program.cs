@@ -7,7 +7,7 @@ var builder = new ConfigurationBuilder()
                 .AddUserSecrets<Program>();
 IConfiguration Configuration = builder.Build();
 
-var IS_AZURE_OPENAI = true;
+var IS_AZURE_OPENAI = false;
 var AZURE_OPENAI_ENDPOINT = Configuration["azure-openai-endpoint"] ?? string.Empty;
 var AZURE_OPENAI_API_KEY = Configuration["azure-openai-api-key"] ?? string.Empty;
 var OPENAI_API_KEY = Configuration["openai-api-key"] ?? string.Empty;
