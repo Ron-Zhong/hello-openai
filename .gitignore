@@ -3,6 +3,7 @@
 [Oo]bj/
 net*.0/
 .vscode/
+.vs/
 
 # Visual Studio files
 *.user
