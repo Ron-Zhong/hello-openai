@@ -3,25 +3,26 @@ using Azure.AI.OpenAI;
 using Microsoft.Extensions.Configuration;
 
 var configuration = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
+
 string azureOpenAiEndpoint = configuration["AZURE_OPENAI_ENDPOINT"] ?? string.Empty;
 string azureOpenAiKey = configuration["AZURE_OPENAI_API_KEY"] ?? string.Empty;
 string deploymentName = configuration["AZURE_OPENAI_DEPLOYMENT_ID"] ?? string.Empty;
+
 string searchEndpoint = configuration["AZURE_AI_SEARCH_ENDPOINT"] ?? string.Empty;
 string searchKey = configuration["AZURE_AI_SEARCH_API_KEY"] ?? string.Empty;
 string searchIndex = configuration["AZURE_AI_SEARCH_INDEX"] ?? string.Empty;
 
-
-var client = new OpenAIClient(new Uri(azureOpenAiEndpoint), new AzureKeyCredential(azureOpenAiKey));
+OpenAIClient client = new (new Uri(azureOpenAiEndpoint), new AzureKeyCredential(azureOpenAiKey));
 
 while (true)
 {
-    Console.Write("\n\n Input: ");
+    await Console.Out.WriteAsync("\n\nMIMS AI: Ask me any healthcare questions.\nUser: ");
     string input = Console.ReadLine()!;
-    await ChatAsync(input);
+    await ChatWithYourDataAsync(input);
 }
-async Task ChatAsync(string input)
+async Task ChatWithYourDataAsync(string input)
 {
-    input += " Would you respond with a list of answers?";
+    //input += " Please give a summary in 3 lines and list down the answer in bulletins and each line shouldn't be more than 30 words.";
     var chatCompletionsOptions = new ChatCompletionsOptions()
     {
         DeploymentName = deploymentName,
@@ -46,11 +47,12 @@ async Task ChatAsync(string input)
     {
         if (chatUpdate.Role.HasValue)
         {
-            Console.Write($"{chatUpdate.Role.Value.ToString().ToUpperInvariant()}: ");
+            //await Console.Out.WriteAsync(($"{chatUpdate.Role.Value.ToString().ToUpperInvariant()}: ");
+            await Console.Out.WriteAsync("MIMS AI: \n\t");
         }
         if (!string.IsNullOrEmpty(chatUpdate.ContentUpdate))
         {
-            Console.Write(chatUpdate.ContentUpdate);
+            await Console.Out.WriteAsync(chatUpdate.ContentUpdate);
         }
     }
 }
