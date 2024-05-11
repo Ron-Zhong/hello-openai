@@ -1,0 +1,11 @@
+#### Reference
+https://learn.microsoft.com/en-us/azure/ai-services/openai/use-your-data-quickstart?context=%2Fazure%2Fsearch%2Fcontext%2Fcontext&tabs=command-line%2Cpython-new&pivots=programming-language-csharp#async-with-streaming
+
+```pwsh
+setx AZURE_OPENAI_ENDPOINT REPLACE_WITH_YOUR_AOAI_ENDPOINT_VALUE_HERE
+setx AZURE_OPENAI_API_KEY REPLACE_WITH_YOUR_AOAI_KEY_VALUE_HERE
+setx AZURE_OPENAI_DEPLOYMENT_ID REPLACE_WITH_YOUR_AOAI_DEPLOYMENT_VALUE_HERE
+setx AZURE_AI_SEARCH_ENDPOINT REPLACE_WITH_YOUR_AZURE_SEARCH_RESOURCE_VALUE_HERE
+setx AZURE_AI_SEARCH_API_KEY REPLACE_WITH_YOUR_AZURE_SEARCH_RESOURCE_KEY_VALUE_HERE
+setx AZURE_AI_SEARCH_INDEX REPLACE_WITH_YOUR_INDEX_NAME_HERE
+```
