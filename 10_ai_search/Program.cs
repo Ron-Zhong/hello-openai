@@ -15,32 +15,57 @@ var searchKey = configuration["AZURE_AI_SEARCH_KEY"]; // Add your Azure AI Searc
 var searchIndexName = "index-sit-msp-articles"; // Add your Azure AI Search index name here
 var client = new OpenAIClient(new Uri(apiBase), new AzureKeyCredential(apiKey!));
 
+// var chatCompletionsOptions = new ChatCompletionsOptions()
+// {
+//     Messages =
+//     {
+//         new Chat(ChatRole.System, "What are the differences between Azure Machine Learning and Azure AI services?")
+//     },
+//     // The addition of AzureChatExtensionsOptions enables the use of Azure OpenAI capabilities that add to
+//     // the behavior of Chat Completions, here the "using your own data" feature to supplement the context
+//     // with information from an Azure AI Search resource with documents that have been indexed.
+//     AzureExtensionsOptions = new AzureChatExtensionsOptions()
+//     {
+//         Extensions =
+//         {
+//             new AzureCognitiveSearchChatExtensionConfiguration()
+//             {
+//                 SearchEndpoint = new Uri(searchEndpoint),
+//                 IndexName = searchIndexName,
+//                 SearchKey = new AzureKeyCredential(searchKey!),
+//                 QueryType = new AzureChatExtensionType(azure_search),
+//                 Parameters = FromString([object Object]),
+//             },
+//         },
+//     },
+//     DeploymentName = gpt - 35 - turbo,
+//     MaxTokens = 800,
+//     StopSequences = null,
+//     Temperature = 0,
+// };
+
 var chatCompletionsOptions = new ChatCompletionsOptions()
 {
     Messages =
     {
-        new Chat(ChatRole.System, "What are the differences between Azure Machine Learning and Azure AI services?")
+        new ChatRequestSystemMessage("Is there any side effect by taking too much statin?")
     },
     // The addition of AzureChatExtensionsOptions enables the use of Azure OpenAI capabilities that add to
     // the behavior of Chat Completions, here the "using your own data" feature to supplement the context
     // with information from an Azure AI Search resource with documents that have been indexed.
-    AzureExtensionsOptions = new AzureChatExtensionsOptions()
-    {
-        Extensions =
-        {
-            new AzureCognitiveSearchChatExtensionConfiguration()
-            {
-                SearchEndpoint = new Uri(searchEndpoint),
-                IndexName = searchIndexName,
-                SearchKey = new AzureKeyCredential(searchKey!),
-                QueryType = new AzureChatExtensionType(azure_search),
-                Parameters = FromString([object Object]),
-            },
-        },
-    },
-    DeploymentName = gpt - 35 - turbo,
+    // AzureExtensionsOptions = new AzureChatExtensionsOptions()
+    // {
+    //     Extensions =
+    //     {
+    //         new AzureSearchChatExtensionConfiguration()
+    //         {
+    //             SearchEndpoint = new Uri(searchEndpoint),
+    //             IndexName = searchIndexName,
+    //         },
+    //     },
+    // },
+    DeploymentName = "gpt-35-turbo-16k",
     MaxTokens = 800,
-    StopSequences = null,
     Temperature = 0,
 };
 
