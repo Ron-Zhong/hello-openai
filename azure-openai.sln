@@ -21,9 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure AI Search", "Azure AI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_chat_with_ai_search", "10_ai_search\10_chat_with_ai_search.csproj", "{5EF042BE-9CF6-40B0-A50B-2F5FFE4F60C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_semantic_ranking", "11_semantic_ranking\11_semantic_ranking.csproj", "{E00F503A-9E0C-4297-88A0-54FD0B2A0BBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_semantic_ranking", "11_semantic_ranking\11_semantic_ranking.csproj", "{E00F503A-9E0C-4297-88A0-54FD0B2A0BBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_semantic_ai_search", "12_semantic_ai_search\12_semantic_ai_search.csproj", "{7EC1BBEA-9E65-427F-978E-5C6448022628}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_semantic_ai_search", "12_semantic_ai_search\12_semantic_ai_search.csproj", "{7EC1BBEA-9E65-427F-978E-5C6448022628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_dalle_image_generation", "07_dalle_image_generation\07_dalle_image_generation.csproj", "{64EF4F47-DB6F-485B-AE77-5D365148B956}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{7EC1BBEA-9E65-427F-978E-5C6448022628}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EC1BBEA-9E65-427F-978E-5C6448022628}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EC1BBEA-9E65-427F-978E-5C6448022628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64EF4F47-DB6F-485B-AE77-5D365148B956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64EF4F47-DB6F-485B-AE77-5D365148B956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64EF4F47-DB6F-485B-AE77-5D365148B956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64EF4F47-DB6F-485B-AE77-5D365148B956}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{5EF042BE-9CF6-40B0-A50B-2F5FFE4F60C2} = {D1ED5059-7634-44EE-888A-DC8F83F62A5E}
 		{E00F503A-9E0C-4297-88A0-54FD0B2A0BBE} = {D1ED5059-7634-44EE-888A-DC8F83F62A5E}
 		{7EC1BBEA-9E65-427F-978E-5C6448022628} = {D1ED5059-7634-44EE-888A-DC8F83F62A5E}
+		{64EF4F47-DB6F-485B-AE77-5D365148B956} = {41765E6C-453F-4691-9D0C-F702E7B1D338}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C60A3C9F-33DE-44DF-A67B-2A978EEB503A}
