@@ -25,6 +25,7 @@ async Task ChatWithYourDataAsync(string input)
     //input += " Please give a summary in 3 lines and list down the answer in bulletins and each line shouldn't be more than 30 words.";
     var chatCompletionsOptions = new ChatCompletionsOptions()
     {
+        MaxTokens = 150,
         DeploymentName = deploymentName,
         Messages =
         {
@@ -43,6 +44,7 @@ async Task ChatWithYourDataAsync(string input)
             }
         }
     };
+
     await foreach (StreamingChatCompletionsUpdate chatUpdate in client.GetChatCompletionsStreaming(chatCompletionsOptions))
     {
         if (chatUpdate.Role.HasValue)

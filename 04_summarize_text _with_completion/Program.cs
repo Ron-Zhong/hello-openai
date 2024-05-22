@@ -43,6 +43,7 @@ var completionsOptions = new CompletionsOptions()
 {
     DeploymentName = deploymentName, 
     Prompts = { summarizationPrompt },
+    MaxTokens = 1500
 };
 
 Response<Completions> completionsResponse = await client.GetCompletionsAsync(completionsOptions);
