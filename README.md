@@ -91,3 +91,4 @@ setx AZURE_AI_SEARCH_INDEX REPLACE_WITH_YOUR_INDEX_NAME_HERE
 - [Quickstart: Generate images with Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/dall-e-quickstart?pivots=programming-language-csharp&tabs=dalle3%2Ccommand-line)
 - [Quickstart: Chat with Azure OpenAI models using your own data](https://learn.microsoft.com/en-us/azure/ai-services/openai/use-your-data-quickstart?context=%2Fazure%2Fsearch%2Fcontext%2Fcontext&tabs=command-line%2Cpython-new&pivots=programming-language-csharp#async-with-streaming)
 - [Quickstart: Semantic ranking with .NET or Python](https://learn.microsoft.com/en-us/azure/search/search-get-started-semantic?tabs=dotnet)
+- [Azure OpenAI client library for .NET](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/openai/Azure.AI.OpenAI)
