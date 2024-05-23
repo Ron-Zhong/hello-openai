@@ -69,7 +69,7 @@ async Task ChatWithYourDataAsync(string input)
         if (chatUpdate.Role.HasValue)
         {
             //await Console.Out.WriteAsync(($"{chatUpdate.Role.Value.ToString().ToUpperInvariant()}: ");
-            await Console.Out.WriteLineAsync("\n\nMIMS Specialty | AI Bot (SERP):");
+            await Console.Out.WriteLineAsync("\n\n Generative AI:");
         }
         if (!string.IsNullOrEmpty(chatUpdate.ContentUpdate))
         {
@@ -97,7 +97,7 @@ async Task AiSearchAsync(string input, int size, int skip)
 
 
     await Console.Out.WriteLineAsync("\n\n\n");
-    await Console.Out.WriteLineAsync("MIMS Specialty | News and Updates:");
+    await Console.Out.WriteLineAsync("Generative AI:");
 
     SearchResults<Article> response = await searchClient.SearchAsync<Article>(input, options);
     foreach (SearchResult<Article> result in response.GetResults())
