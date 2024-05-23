@@ -16,7 +16,7 @@ OpenAIClient client = new (new Uri(azureOpenAiEndpoint), new AzureKeyCredential(
 
 while (true)
 {
-    await Console.Out.WriteAsync("\n\nMIMS AI: Ask me any healthcare questions.\nUser: ");
+    await Console.Out.WriteAsync("\n\n Generative AI: Ask me any healthcare questions.\nUser: ");
     string input = Console.ReadLine()!;
     await ChatWithYourDataAsync(input);
 }
@@ -50,7 +50,7 @@ async Task ChatWithYourDataAsync(string input)
         if (chatUpdate.Role.HasValue)
         {
             //await Console.Out.WriteAsync(($"{chatUpdate.Role.Value.ToString().ToUpperInvariant()}: ");
-            await Console.Out.WriteAsync("MIMS AI: \n\t");
+            await Console.Out.WriteAsync("Generative AI: \n\t");
         }
         if (!string.IsNullOrEmpty(chatUpdate.ContentUpdate))
         {
