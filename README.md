@@ -68,9 +68,7 @@ async Task AiSearchAsync(string input)
 
 
 With Azure SDK and Azure.AI.OpenAI Nuget package, it makes .NET developers easy to work on GenAI software development.
-
-Hope you will enjoy my code samples. Cheers!! 
-
+Cheers!! 
 
 #### Prerequisite: To setup required credentials with below commands or with secret manager in Visual Studio 2022
 
